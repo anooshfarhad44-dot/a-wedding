@@ -65,9 +65,9 @@ export default function InvitationCard({ onOpen }: { onOpen: () => void }) {
 
   const references = [
     { name: "Naveed Farhad", phone: "03340075333", title: "Family Elder" },
-    { name: "Waheed Farhad", phone: "03340075333", title: "Patriarch" },
-    { name: "Rizwan Khan", phone: "03435105470", title: "Royal Guardian" },
-    { name: "Ahsan Ranjha", phone: "03443048293", title: "Noble Protector" }
+    { name: "Waheed Farhad", phone: "03340075333", title: "Big Brother" },
+    { name: "Rizwan Khan", phone: "03435105470", title: "Brother-in-Law" },
+    { name: "Ahsan Ranjha", phone: "03443048293", title: "Brother-in-Law" }
   ];
 
   return (
