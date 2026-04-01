@@ -1,0 +1,193 @@
+@import "tailwindcss";
+
+:root {
+  --background: #2a0f17;
+  --foreground: #fff4eb;
+  --font-sans: "Aptos", "Segoe UI", "Trebuchet MS", sans-serif;
+  --font-display: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --muted: #d8b5b0;
+  --rose: #8f2037;
+  --gold: #e7c181;
+  --card: rgba(255, 248, 244, 0.1);
+  --border: rgba(244, 219, 204, 0.16);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background:
+    radial-gradient(circle at top, rgba(170, 31, 61, 0.28), transparent 28%),
+    radial-gradient(circle at right, rgba(231, 193, 129, 0.14), transparent 24%),
+    linear-gradient(180deg, #5c1629 0%, #3f1220 28%, #2b0f18 58%, #17070d 100%);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image:
+    linear-gradient(rgba(255, 248, 242, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 248, 242, 0.04) 1px, transparent 1px);
+  background-size: 90px 90px;
+  mask-image: radial-gradient(circle at center, black 45%, transparent 90%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(180, 51, 79, 0.35);
+  color: #fff4eb;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.ornament-ring {
+  position: absolute;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 236, 225, 0.14);
+  box-shadow: 0 0 60px rgba(143, 32, 55, 0.22);
+}
+
+.glass-panel {
+  background: linear-gradient(180deg, rgba(84, 18, 32, 0.92), rgba(45, 12, 20, 0.96));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 24px 80px rgba(9, 2, 4, 0.28);
+  backdrop-filter: blur(18px);
+}
+
+.section-title {
+  font-family: var(--font-display), serif;
+  letter-spacing: 0.04em;
+}
+
+.glow-line {
+  background: linear-gradient(90deg, transparent, rgba(231, 193, 129, 0.95), transparent);
+}
+
+.petal {
+  position: absolute;
+  border-radius: 9999px 9999px 9999px 9999px / 70% 70% 30% 30%;
+  background: linear-gradient(180deg, rgba(255, 233, 225, 0.96), rgba(143, 32, 55, 0.42));
+  filter: blur(0.2px);
+  opacity: 0.8;
+}
+
+.invitation-card {
+  position: relative;
+  color: #f5e6d3;
+  background:
+    radial-gradient(circle at top, rgba(255, 230, 210, 0.1), transparent 28%),
+    linear-gradient(180deg, rgba(139, 0, 0, 0.95), rgba(139, 0, 0, 0.98));
+  border: 1px solid rgba(108, 34, 47, 0.18);
+  box-shadow:
+    0 32px 80px rgba(18, 5, 9, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 0 0 1px rgba(255, 248, 237, 0.15);
+}
+
+.invitation-card::before,
+.invitation-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.invitation-card::before {
+  background:
+    linear-gradient(transparent 0, transparent calc(100% - 1px), rgba(167, 131, 97, 0.14) calc(100% - 1px)),
+    linear-gradient(90deg, transparent 0, transparent calc(100% - 1px), rgba(167, 131, 97, 0.14) calc(100% - 1px)),
+    radial-gradient(circle at 20% 18%, rgba(212, 184, 146, 0.18), transparent 22%);
+  opacity: 0.9;
+}
+
+.invitation-card::after {
+  inset: 14px;
+  border: 1px solid rgba(169, 139, 104, 0.2);
+  border-radius: 1.3rem;
+}
+
+.postal-stamp {
+  height: 5.5rem;
+  width: 5.5rem;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed rgba(143, 32, 55, 0.42);
+  border-radius: 1.25rem;
+  background:
+    radial-gradient(circle at top left, rgba(255, 250, 241, 0.9), transparent 34%),
+    linear-gradient(180deg, #f7d8ce 0%, #efc2ba 100%);
+  box-shadow:
+    0 10px 25px rgba(92, 20, 35, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  transform: rotate(8deg);
+}
+
+.postal-stamp::before {
+  content: "";
+  position: absolute;
+  inset: 0.35rem;
+  border: 1px solid rgba(184, 126, 90, 0.32);
+  border-radius: 1rem;
+}
+
+.seal-ribbon {
+  background: linear-gradient(90deg, rgba(164, 52, 76, 0.12), rgba(143, 32, 55, 0.52), rgba(164, 52, 76, 0.12));
+  box-shadow: inset 0 1px 0 rgba(255, 248, 237, 0.55);
+}
+
+.wax-seal {
+  background:
+    radial-gradient(circle at 35% 30%, rgba(255, 215, 183, 0.55), transparent 35%),
+    radial-gradient(circle at center, #9b673f 0%, #8b5936 52%, #734225 100%);
+  box-shadow:
+    0 8px 18px rgba(88, 43, 17, 0.28),
+    inset 0 2px 3px rgba(255, 241, 225, 0.28),
+    inset 0 -3px 5px rgba(71, 36, 13, 0.28);
+}
+
+.wax-seal::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 231, 201, 0.24);
+}
+
+.wax-seal::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 9999px;
+  border: 1px dashed rgba(140, 85, 48, 0.22);
+}
+
+.venue-card {
+  border: 1px solid rgba(244, 218, 201, 0.16);
+  background: linear-gradient(180deg, rgba(255, 247, 242, 0.14), rgba(255, 241, 235, 0.08));
+  box-shadow: 0 28px 65px rgba(11, 2, 5, 0.28);
+  backdrop-filter: blur(10px);
+}
