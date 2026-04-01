@@ -2,9 +2,28 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Younas Salik Wedding Celebration",
+  title: "Anoosh Wedding",
   description:
-    "A beautifully animated wedding website for the celebration of Younas Salik's daughter and Anoosh Farahd from 14-16 May.",
+    "A beautifully animated wedding website for Anoosh and Younas with ceremony details, invitations, and event schedule.",
+  icons: {
+    icon: "/seal.png",
+    shortcut: "/seal.png",
+    apple: "/seal.png",
+  },
+  openGraph: {
+    title: "Anoosh Wedding",
+    description:
+      "A beautifully animated wedding website for Anoosh and Younas with ceremony details, invitations, and event schedule.",
+    images: "/seal.png",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Anoosh Wedding",
+    description:
+      "A beautifully animated wedding website for Anoosh and Younas with ceremony details, invitations, and event schedule.",
+    images: "/seal.png",
+  },
 };
 
 export default function RootLayout({

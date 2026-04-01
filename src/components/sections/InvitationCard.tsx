@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Phone, MessageCircle, Heart, Sparkles, ArrowRight } from "lucide-react";
@@ -73,11 +74,8 @@ export default function InvitationCard({ onOpen }: { onOpen: () => void }) {
     <motion.section
       initial={{ opacity: 0, scale: 0.96 }}
       animate={{ opacity: 1, scale: 1 }}
-      className="relative flex min-h-screen items-center justify-center px-4 py-10
-      bg-[linear-gradient(135deg,#f8f3eb,#efe6d8,#f5efe6)]"
+      className="relative flex min-h-screen items-center justify-center px-4 py-10 bg-transparent"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(90,29,42,0.08),transparent_40%)]" />
-
       <motion.div
         role="button"
         tabIndex={0}
@@ -86,9 +84,7 @@ export default function InvitationCard({ onOpen }: { onOpen: () => void }) {
         whileTap={{ scale: 0.98 }}
         className="group relative w-full max-w-5xl rounded-[2rem] cursor-pointer"
       >
-        <div className="relative z-10 rounded-[1.6rem] border border-[#5a1d2a]/30 
-        bg-[linear-gradient(180deg,rgba(84,18,32,0.95),rgba(45,12,20,0.98))]
-        px-6 py-8 shadow-[0_30px_80px_rgba(90,29,42,0.25)]">
+        <div className="glass-panel relative overflow-hidden rounded-[2rem] border border-white/10 px-6 py-8 shadow-[0_30px_80px_rgba(90,29,42,0.35)]">
 
           {/* HEADER */}
           <div className="flex justify-between items-center border-b border-white/10 pb-4">
@@ -253,10 +249,11 @@ export default function InvitationCard({ onOpen }: { onOpen: () => void }) {
                 onKeyDown={(e) => e.key === 'Enter' && onOpen()}
                 aria-label="Click to open full wedding invitation"
               >
-                <img
+                <Image
                   src="/seal.png"
                   alt="Wedding Seal"
-                  className="w-full h-full object-contain drop-shadow-[0_8px_25px rgba(139,0,0,0.4)]"
+                  fill
+                  className="object-contain drop-shadow-[0_8px_25px_rgba(139,0,0,0.4)]"
                 />
 
                 {/* Click hint text - Always visible */}
