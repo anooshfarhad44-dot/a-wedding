@@ -92,7 +92,7 @@ export default function HeroSection() {
             variants={fadeUp}
             className="text-[10px] sm:text-xs uppercase tracking-[0.4em] sm:tracking-[0.55em] text-[#dcb7a8]"
           >
-            Anoosh Farhad's Family
+            Younas Salik's Family
           </motion.p>
 
           <motion.h1
@@ -103,7 +103,7 @@ export default function HeroSection() {
               animate={{ y: [0, -2, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             >
-              Younas Salik Daughter
+              Amber Younas 
             </motion.span>
             <span className="block mt-4">
               <motion.span 
@@ -120,7 +120,7 @@ export default function HeroSection() {
                 </motion.div>
               </motion.span>
               <motion.span 
-                className="block text-[#e7c181] mt-1 sm:mt-2 text-base sm:text-lg md:text-xl lg:text-2xl"
+                className="block text-[#e7c181] mt-1 sm:mt-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
                 animate={{ opacity: [0.8, 1, 0.8] }}
                 transition={{ duration: 3, repeat: Infinity }}
               >

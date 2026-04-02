@@ -64,10 +64,11 @@ export default function InvitationCard({ onOpen }: { onOpen: () => void }) {
   }, []);
 
   const references = [
-    { name: "Naveed Farhad", phone: "03340075333", title: "Family Elder" },
-    { name: "Waheed Farhad", phone: "03340075333", title: "Big Brother" },
-    { name: "Rizwan Khan", phone: "03435105470", title: "Brother-in-Law" },
-    { name: "Ahsan Ranjha", phone: "03443048293", title: "Brother-in-Law" }
+    { name: "Younas Salik", phone: "03379710671", title: "Father" },
+    { name: "Sharoon Younas", phone: "03358421547", title: "Brother" },
+    { name: "Imram Younas", phone: "03334799715", title: "Brother" },
+    { name: "Sagar Younas", phone: "03422311234", title: "Brother" },
+    { name: "Faisal Waris", phone: "03418866251", title: "Uncle" }
   ];
 
   return (
@@ -119,11 +120,11 @@ export default function InvitationCard({ onOpen }: { onOpen: () => void }) {
           {/* TITLE */}
           <div className={`mt-10 text-center ${isSmallScreen ? "mt-6" : ""}`}>
             <p className={`text-xs tracking-[0.5em] text-[#dcb7a8] uppercase ${isSmallScreen ? "text-[8px] tracking-[0.3em]" : ""}`}>
-              Anoosh Farhad's Family
+              Yonas Salik's Family
             </p>
 
             <h1 className={`mt-6 text-4xl sm:text-6xl font-semibold text-white leading-tight ${isSmallScreen ? " text-[23px] mt-3" : ""}`}>
-              Yonas Salik's Daughter <br />
+              Amber Yonas <br />
               <span className={`inline-flex items-center gap-2 text-[#f25a5a] ${isSmallScreen ? "gap-1" : ""}`}>
                 Weds <Heart className={isSmallScreen ? "h-3 w-3" : "h-6 w-6"} />
               </span>
